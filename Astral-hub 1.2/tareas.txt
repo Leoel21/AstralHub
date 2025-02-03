@@ -1,0 +1,13 @@
+Falta:
+
+
+-Pagina survival OP
+-Pagina survival custom 
+-Cambiar packs, dentro de cada survival
+-seccion de rules
+
+
+
+
+
+-enlazar jugadores en tiempo real (cuando el sv este listo)
