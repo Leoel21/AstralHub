@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Simulación de contador de jugadores
     function updatePlayerCount() {
     const playerCountElements = document.querySelectorAll('.player-count-number');
     playerCountElements.forEach(element => {
@@ -21,11 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
 
-    // Actualizar contador cada 30 segundos
     updatePlayerCount();
     setInterval(updatePlayerCount, 30000);
 
-    // Efecto hover en features
     const featureItems = document.querySelectorAll('.feature-item');
     featureItems.forEach(item => {
     item.addEventListener('mouseover', function() {
@@ -51,14 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     });
 
-    // Efecto de click en botones
     const joinButtons = document.querySelectorAll('.join-button');
     joinButtons.forEach(button => {
     button.addEventListener('click', function() {
         this.style.transform = 'scale(0.95)';
         setTimeout(() => this.style.transform = '', 150);
         
-        // Aquí puedes agregar la lógica para unirse al servidor
         console.log('¡Uniendo al servidor!');
     });
     });
@@ -96,14 +91,13 @@ async function updateDiscordStats() {
     }
 }
 
-// Actualiza cada 30 segundos
+
 setInterval(updateDiscordStats, 30000);
 updateDiscordStats();
 
 
-// JavaScript para la funcionalidad de las FAQs
 document.addEventListener('DOMContentLoaded', function() {
-    // Manejar clicks en los botones FAQ
+
     const faqButtons = document.querySelectorAll('.faq-button');
     
     faqButtons.forEach(button => {
@@ -111,12 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const faqItem = button.parentElement;
             const isActive = faqItem.classList.contains('active');
             
-            // Cerrar todos los FAQs
+
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
             
-            // Si el FAQ clickeado no estaba activo, abrirlo
             if (!isActive) {
                 faqItem.classList.add('active');
             }
@@ -124,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Función para copiar la IP
 function copyIP() {
     navigator.clipboard.writeText('mc.astralhub.xyz');
     const button = document.querySelector('.ip-button');
